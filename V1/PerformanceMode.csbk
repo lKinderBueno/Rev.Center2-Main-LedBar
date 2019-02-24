@@ -1,0 +1,181 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Intel.Overclocking.SDK.Monitoring;
+using Intel.Overclocking.SDK.Tuning;
+using Microsoft.Win32;
+using System;
+using System.CodeDom.Compiler;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Management;
+using System.Runtime.InteropServices;
+using System.ServiceProcess;
+using System.Text;
+using System.Threading;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Markup;
+using System.Windows.Threading;
+
+
+/* change_PL1 Turbo boost power max
+ *  this.Set_TuningID(48U, Convert.ToDecimal(this.SL_powerlimit1.Value));
+   change TURBO TIME  
+   this.Set_TuningID(66U, Convert.ToDecimal(this.powerlimittime_value.Text));
+    change PL2 Turbo boost short max power
+   this.Set_TuningID(49U, Decimal.One);
+
+ */
+
+namespace Rev.Center2
+{
+    class PerformanceMode
+    {
+        const string userRoot = "HKEY_CURRENT_USER";
+        const string keyName = userRoot + "\\" + "Rev.Center2";
+        private RegistryKey Regedit = Registry.CurrentUser.CreateSubKey("Rev.Center2");
+        string temp = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        private int PowerSaving_mode_actived = (int)Registry.GetValue(keyName, "PowerSaving", 0);
+        private static EventLog outlog = new EventLog();
+        private DispatcherTimer Read_timer = new DispatcherTimer();
+        public DispatcherTimer checkService = new DispatcherTimer();
+        public ITuningLibrary SetTuning;
+        public MonitorInfo InfoDevice;
+
+        public ServiceInfo serviceInfo;
+        public TuningInfo tuningInfo;
+
+        [DllImport("kernel32", CharSet = CharSet.Unicode)]
+        public static extern int GetPrivateProfileString(
+          string section,
+          string key,
+          string def,
+          StringBuilder retStr,
+          int bufferSize,
+          string filePath);
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
+        private static extern int GetPrivateProfileSection(
+          string lpAppName,
+          byte[] lpszReturnBuffer,
+          int bufferSize,
+          string filePath);
+
+        public List<ClientTuningControl> TuningControls { get; set; }
+
+        public List<ServiceInfoData> ServiceInfo { get; set; }
+
+        public List<ClientMonitor> MonitorControls { get; set; }
+
+
+        public void StartXTU()
+        {
+            this.checkService.Interval = TimeSpan.FromMilliseconds(100.0);
+            this.checkService.Tick += new EventHandler(this.checkService_Tick);
+            this.checkService.Start();
+            Process.Start(temp + "/Throttlestop/Throttlestop.exe");
+
+        }
+
+        public void checkService_Tick(object sender, EventArgs e)
+        {
+
+            if (new ServiceController()
+            {
+                ServiceName = "XTU3SERVICE"
+            }.Status == ServiceControllerStatus.Running)
+            {
+                this.checkService.Stop();
+
+                this.init_xtu();
+                //this.GetPL1PL2_Default();
+
+            }
+            this.checkService.Interval = TimeSpan.FromSeconds(1.0);
+        }
+
+        public void init_xtu()
+        {
+
+            this.SetTuning = (ITuningLibrary)TuningLibrary.Instance;
+
+            this.Loaded_xtu();
+        }
+
+        private void Loaded_xtu()
+        {
+            this.serviceInfo = new ServiceInfo();
+            this.ServiceInfo = this.serviceInfo.GetServiceInfoList();
+            this.tuningInfo = new TuningInfo();
+            this.TuningControls = this.tuningInfo.GetAvailableControls();
+            this.TuningControls.ForEach((Action<ClientTuningControl>)(data => { }));
+
+        }
+
+        private bool Set_TuningID(uint ID, Decimal value)
+        {
+            bool bRequiresReboot = this.TuningControls.Find((Predicate<ClientTuningControl>)(x => (int)x.Id == (int)ID)).RequiresReboot; ;
+            return this.SetTuning.Tune(ID, value, bRequiresReboot);
+        }
+
+
+        private void Check_Deactive_PowerSavingMode()
+        {
+            if (PowerSaving_mode_actived == 1)
+            {
+                object data = (object)0;
+                WMIEC.WMIReadECRAM(1895UL, ref data);
+                WMIEC.WMIWriteECRAM(1895UL, 8UL + (Convert.ToUInt64(data) & 247UL));
+                PowerSaving_mode_actived = 0;
+                MessageBox.Show("Powersaving Mode era attiva e ora disattiva");
+            }
+
+
+        }
+
+        public void SetPerformanceMode(int mode)
+        {
+            switch (mode)
+            {
+                case 0: //quiet & power saving mode
+                    if (PowerSaving_mode_actived == 0)
+                    {
+                        object data = (object)0;
+                        WMIEC.WMIReadECRAM(1895UL, ref data);
+                        WMIEC.WMIWriteECRAM(1895UL, 8UL + (Convert.ToUInt64(data) & 247UL));
+                        PowerSaving_mode_actived = 1;
+                    }
+                    Set_TuningID(48U, Convert.ToDecimal(35)); //cpu boost 
+                    Set_TuningID(47U, Convert.ToDecimal(35));
+                    break;
+                case 1: //entertainment
+                    Check_Deactive_PowerSavingMode();
+                    Set_TuningID(48U, Convert.ToDecimal(35)); //cpu boost 
+                    Set_TuningID(47U, Convert.ToDecimal(35));  //max cpu boost 
+                    break;
+                case 2: //performance
+                    Check_Deactive_PowerSavingMode();
+                    Set_TuningID(48U, Convert.ToDecimal(50)); //cpu boost 
+                    Set_TuningID(47U, Convert.ToDecimal(70));  //max cpu boost 
+                    break;
+            }
+        }
+
+
+
+
+    }
+}
+

@@ -1,0 +1,227 @@
+﻿<Window x:Class="Rev.Center2.Loading"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rev.Center2"
+        mc:Ignorable="d"
+           Title="LoadingWindow" Height="200" Width="200" AllowsTransparency="true" WindowStyle="None"
+        WindowStartupLocation="CenterScreen" ShowInTaskbar="false" Topmost="true" Background="{x:Null}" >
+    <FrameworkElement.Resources>
+        <Storyboard x:Key="c1" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0.143"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.9" Value="0.286"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.2" Value="0.429"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0.571"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.8" Value="0.714"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:2.4" Value="0.857"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="c2" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.143"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0.286"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.9" Value="0.429"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.2" Value="0.571"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0.714"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.8" Value="0.857"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:2.4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="c3" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="0" Value="0.143"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.286"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0.429"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.9" Value="0.571"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.2" Value="0.714"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0.857"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.8" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:2.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="c4" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="0" Value="0.286"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.429"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0.571"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.9" Value="0.714"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.2" Value="0.857"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.8" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:2.4" Value="0.143"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="c5" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="0" Value="0.429"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.571"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0.714"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.9" Value="0.857"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.8" Value="0.143"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:2.4" Value="0.286"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="c6" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="0" Value="0.571"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.714"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0.857"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.9" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0.143"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.8" Value="0.286"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:2.4" Value="0.429"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="c7" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="0" Value="0.714"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.857"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.2" Value="0.143"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0.286"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.8" Value="0.429"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:2.4" Value="0.571"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="c8" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="0" Value="0.857"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.9" Value="0.143"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.2" Value="0.286"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0.429"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1.8" Value="0.571"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:2.4" Value="0.714"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Storyboard_load" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="circle_1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.14"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.29"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.43"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.57"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0.71"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.86"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="circle_8">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.14"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.29"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.43"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0.57"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.71"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.86"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="circle_7">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.86"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.14"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.29"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0.43"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.57"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.71"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="circle_6">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.71"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.86"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.14"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0.29"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.43"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.57"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="circle_5">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.57"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.71"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.86"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0.14"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.29"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.43"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="circle_4">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.43"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.57"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.71"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.86"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.14"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.29"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="circle_3">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.29"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.43"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.57"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.71"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.86"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.14"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="circle_2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.14"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.29"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.43"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.57"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.71"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0.86"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </FrameworkElement.Resources>
+    <FrameworkElement.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard_load}"/>
+        </EventTrigger>
+    </FrameworkElement.Triggers>
+    <Viewbox Stretch="Fill" StretchDirection="DownOnly">
+        <Grid Height="300" Width="300">
+            <Canvas x:Name="canvas" Height="300" Width="300" Grid.ColumnSpan="2" Grid.RowSpan="2"
+              RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </UIElement.RenderTransform>
+                <Ellipse x:Name="circle_1" Fill="#FF545B5F" Width="58.959" Height="59.042" Canvas.Left="120.465"
+                 Canvas.Top="9"/>
+                <Ellipse x:Name="circle_2" Fill="#FF545B5F" Width="58.959" Height="59.042" Canvas.Left="41.958"
+                 Canvas.Top="41.166" Opacity="0"/>
+                <Ellipse x:Name="circle_3" Fill="#FF545B5F" Width="58.959" Height="59.042" Canvas.Left="9"
+                 Canvas.Top="120.166" Opacity="0.143"/>
+                <Ellipse x:Name="circle_4" Fill="#FF545B5F" Width="58.959" Height="59.042" Canvas.Left="41.958"
+                 Canvas.Top="198.666" Opacity="0.286"/>
+                <Ellipse x:Name="circle_5" Fill="#FF545B5F" Width="58.959" Height="59.042" Canvas.Left="120.465"
+                 Canvas.Top="230.958" Opacity="0.429"/>
+                <Ellipse x:Name="circle_6" Fill="#FF545B5F" Width="58.959" Height="59.042" Canvas.Left="199.293"
+                 Canvas.Top="198.666" Opacity="0.571"/>
+                <Ellipse x:Name="circle_7" Fill="#FF545B5F" Width="58.959" Height="59.042" Canvas.Left="232"
+                 Canvas.Top="120.166" Opacity="0.714"/>
+                <Ellipse x:Name="circle_8" Fill="#FF545B5F" Width="58.959" Height="59.042" Canvas.Left="199.293"
+                 Canvas.Top="41.166" Opacity="0.857"/>
+            </Canvas>
+        </Grid>
+    </Viewbox>
+</Window>

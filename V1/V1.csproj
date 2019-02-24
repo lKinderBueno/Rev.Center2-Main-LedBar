@@ -1,0 +1,795 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{701D15FF-7B99-4B05-AFA8-E56131155082}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Rev.Center2</RootNamespace>
+    <AssemblyName>Rev.Center2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Rev.Center2.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>30E90BB50941F3D7CBE42C803EEC2F0E2D60C0EB</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>V1_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Custom</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Audiodll">
+      <HintPath>E:\Users\elio1\OneDrive\Desktop\Nuova cartella\CC\lib\Audiodll.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoUpdater.NET, Version=1.5.0.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autoupdater.NET.Official.1.5.0\lib\net40\AutoUpdater.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="BatteryDLL">
+      <HintPath>..\..\..\..\..\..\Program Files\OEM\GamingCenter\BatteryDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Controls, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="MySettingDLL">
+      <HintPath>..\..\..\..\..\..\Program Files\OEM\GamingCenter\MySettingDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.8.5\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenHardwareMonitorLib">
+      <HintPath>E:\Users\elio1\OneDrive\Desktop\OpenHardwareMonitor\OpenHardwareMonitorLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="WpfAnimatedGif, Version=1.4.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.1.4.17\lib\net\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Fan_Custom.xaml.cs">
+      <DependentUpon>Fan_Custom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="info\RWReg.cs" />
+    <Compile Include="info\WMIEC.cs" />
+    <Compile Include="PerformanceProfileSwitcher.cs" />
+    <Compile Include="Setting.xaml.cs">
+      <DependentUpon>Setting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LedBar.xaml.cs">
+      <DependentUpon>LedBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LedBar\NativeMethod.cs" />
+    <Compile Include="system_info.xaml.cs">
+      <DependentUpon>system_info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_CoreClock.xaml.cs">
+      <DependentUpon>UserControl_CoreClock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OLD_Fantable.xaml.cs">
+      <DependentUpon>OLD_Fantable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrol_fantable2.xaml.cs">
+      <DependentUpon>usercontrol_fantable2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Volume.xaml.cs">
+      <DependentUpon>Volume.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.xaml.cs">
+      <DependentUpon>Loading.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Fan_Custom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Setting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="LedBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="system_info.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl_CoreClock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OLD_Fantable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="usercontrol_fantable2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Volume.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Loading.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PerformanceMode.csbk" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="V1_1_TemporaryKey.pfx" />
+    <None Include="V1_TemporaryKey.pfx" />
+    <Resource Include="image\neuropol x rg.ttf" />
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\dialog\bg_dialog.png" />
+    <Resource Include="image\dialog\ic_dialog_restart.png" />
+    <Resource Include="image\dialog\ic_dialog_warning.png" />
+    <Resource Include="image\loading\bg_loading.png" />
+    <Resource Include="image\loading\ic_loading.gif" />
+    <Resource Include="image\loading\loading-gif.gif" />
+    <Resource Include="image\main\bg_main_menu_1.png" />
+    <Resource Include="image\main\bg_title_bar_3.png" />
+    <Resource Include="image\main\control center logo.png" />
+    <Resource Include="image\main\control_center_logo.png" />
+    <Resource Include="image\main\ic_basic_setting.png" />
+    <Resource Include="image\main\ic_close.png" />
+    <Resource Include="image\main\ic_extra_setting.png" />
+    <Resource Include="image\main\ic_flexikey.png" />
+    <Resource Include="image\main\ic_fullscreen.png" />
+    <Resource Include="image\main\ic_led_device.png" />
+    <Resource Include="image\main\ic_minimize.png" />
+    <Resource Include="image\main\ic_system_monitor.png" />
+    <Resource Include="image\main\ic_window.png" />
+    <Resource Include="image\main\title_layer_3.png" />
+    <Resource Include="image\page_basicsetting\btn_hibernate_hover.png" />
+    <Resource Include="image\page_basicsetting\btn_sleep_hover.png" />
+    <Resource Include="image\page_basicsetting\device\btn_device_hover.png" />
+    <Resource Include="image\page_basicsetting\device\btn_device_layer1_selected.png" />
+    <Resource Include="image\page_basicsetting\device\ic_camera_enable.png" />
+    <Resource Include="image\page_basicsetting\device\ic_tp_enable.png" />
+    <Resource Include="image\page_basicsetting\device\ic_windows.png" />
+    <Resource Include="image\page_basicsetting\dpi\ic_dpi_display_setting.png" />
+    <Resource Include="image\page_basicsetting\ic_lcd_brightness.png" />
+    <Resource Include="image\page_basicsetting\ic_power_status_ac.png" />
+    <Resource Include="image\page_basicsetting\ic_power_status_dc.png" />
+    <Resource Include="image\page_basicsetting\lockkey\bg_lock_key.png" />
+    <Resource Include="image\page_basicsetting\lockkey\ic_airplane_enable.png" />
+    <Resource Include="image\page_basicsetting\lockkey\ic_caps_enable.png" />
+    <Resource Include="image\page_basicsetting\lockkey\ic_num_enable.png" />
+    <Resource Include="image\page_basicsetting\lockkey\ic_scroll_enable.png" />
+    <Resource Include="image\page_basicsetting\mode\bg_mode_1_layer1.png" />
+    <Resource Include="image\page_basicsetting\mode\btn_mode_entertainment_layer1_selected_1.png" />
+    <Resource Include="image\page_basicsetting\mode\btn_mode_entertainment_layer1_selected_2.png" />
+    <Resource Include="image\page_basicsetting\mode\btn_mode_performance_layer1_selected_1.png" />
+    <Resource Include="image\page_basicsetting\mode\btn_mode_performance_layer1_selected_2.png" />
+    <Resource Include="image\page_basicsetting\mode\btn_mode_power_saving_layer1_selected_1.png" />
+    <Resource Include="image\page_basicsetting\mode\btn_mode_power_saving_layer1_selected_2.png" />
+    <Resource Include="image\page_basicsetting\mode\btn_mode_quiet_layer1_selected_1.png" />
+    <Resource Include="image\page_basicsetting\mode\btn_mode_quiet_layer1_selected_2.png" />
+    <Resource Include="image\page_basicsetting\mode\ic_entertainment_disable.png" />
+    <Resource Include="image\page_basicsetting\mode\ic_performance_disable.png" />
+    <Resource Include="image\page_basicsetting\mode\ic_power_saving_disable.png" />
+    <Resource Include="image\page_basicsetting\mode\ic_quite_disable.png" />
+    <Resource Include="image\page_basicsetting\volume\btn_volume_mute_hover.png" />
+    <Resource Include="image\page_basicsetting\volume\btn_volume_mute_normal.png" />
+    <Resource Include="image\page_basicsetting\volume\btn_volume_play_hover.png" />
+    <Resource Include="image\page_basicsetting\volume\btn_volume_play_normal.png" />
+    <Resource Include="image\page_basicsetting\volume\slider_volume_handle.png" />
+    <Resource Include="image\page_basicsetting\volume\slider_volume_laye2.png" />
+    <Resource Include="image\page_extrasetting\bg_extra_setting_layer_3.png" />
+    <Resource Include="image\page_extrasetting\bg_info_flexiaccess_layer_1.png" />
+    <Resource Include="image\page_extrasetting\bg_qr_code_layer_2.png" />
+    <Resource Include="image\page_extrasetting\btn_headphone_enable_layer_1.png" />
+    <Resource Include="image\page_extrasetting\btn_qr_code.png" />
+    <Resource Include="image\page_extrasetting\btn_qr_code_open_1.png" />
+    <Resource Include="image\page_extrasetting\connect_light.png" />
+    <Resource Include="image\page_extrasetting\connect_line_layer_1.png" />
+    <Resource Include="image\page_extrasetting\connect_line_layer_2.png" />
+    <Resource Include="image\page_extrasetting\fa\appstore.png" />
+    <Resource Include="image\page_extrasetting\fa\googleplay.png" />
+    <Resource Include="image\page_extrasetting\fa\qrcode_awifi.png" />
+    <Resource Include="image\page_extrasetting\fa\qrcode_ios.png" />
+    <Resource Include="image\page_extrasetting\hp_impedance\bg_impedance_range.png" />
+    <Resource Include="image\page_extrasetting\hp_impedance\bg_impedance_range_inactive.png" />
+    <Resource Include="image\page_extrasetting\hp_impedance\ic_headphone_impedance.png" />
+    <Resource Include="image\page_extrasetting\ic_flexiaccess.png" />
+    <Resource Include="image\page_extrasetting\ic_gpu_switch.png" />
+    <Resource Include="image\page_extrasetting\ic_headphone.png" />
+    <Resource Include="image\page_extrasetting\ic_laptop.png" />
+    <Resource Include="image\page_extrasetting\ic_phone.png" />
+    <Resource Include="image\page_extrasetting\ic_skin_color.png" />
+    <Resource Include="image\page_extrasetting\skincolor\color_select_0066ff.png" />
+    <Resource Include="image\page_extrasetting\skincolor\color_select_00ffe4.png" />
+    <Resource Include="image\page_extrasetting\skincolor\color_select_3cff00.png" />
+    <Resource Include="image\page_extrasetting\skincolor\color_select_a200ff.png" />
+    <Resource Include="image\page_extrasetting\skincolor\color_select_a2ff00.png" />
+    <Resource Include="image\page_extrasetting\skincolor\color_select_ff0000.png" />
+    <Resource Include="image\page_extrasetting\skincolor\color_select_ff006c.png" />
+    <Resource Include="image\page_extrasetting\skincolor\color_select_ff00d2.png" />
+    <Resource Include="image\page_extrasetting\skincolor\color_select_ff7200.png" />
+    <Resource Include="image\page_extrasetting\skincolor\color_select_ffea00.png" />
+    <Resource Include="image\page_extrasetting\switch_handle_layer_1.png" />
+    <Resource Include="image\page_extrasetting\switch_handle_layer_2.png" />
+    <Resource Include="image\page_flexikey\ic_fn+backspace.png" />
+    <Resource Include="image\page_flexikey\macro\btn_browse_hover.png" />
+    <Resource Include="image\page_flexikey\macro\btn_browse_normal.png" />
+    <Resource Include="image\page_flexikey\macro\btn_disable_normal.png" />
+    <Resource Include="image\page_flexikey\macro\btn_express_key_enable_time_record_hover.png" />
+    <Resource Include="image\page_flexikey\macro\btn_express_key_enable_time_record_normal.png" />
+    <Resource Include="image\page_flexikey\macro\btn_express_key_restore_hover.png" />
+    <Resource Include="image\page_flexikey\macro\btn_express_key_restore_normal.png" />
+    <Resource Include="image\page_flexikey\macro\btn_macro_start_record_normal.png" />
+    <Resource Include="image\page_flexikey\macro\btn_macro_stop_record_normal.png" />
+    <Resource Include="image\page_flexikey\macro\ic_kb_disable.png" />
+    <Resource Include="image\page_flexikey\macro\ic_kb_normal.png" />
+    <Resource Include="image\page_flexikey\macro\ic_mouse_disable.png" />
+    <Resource Include="image\page_flexikey\macro\ic_send_key.png" />
+    <Resource Include="image\page_flexikey\macro\ic_start_key.png" />
+    <Resource Include="image\page_flexikey\mouse\btn_mouse_backward_hover.png" />
+    <Resource Include="image\page_flexikey\mouse\btn_mouse_forward_hover.png" />
+    <Resource Include="image\page_flexikey\mouse\btn_mouse_left_key_disable.png" />
+    <Resource Include="image\page_flexikey\mouse\btn_mouse_left_key_hover.png" />
+    <Resource Include="image\page_flexikey\mouse\btn_mouse_middle_key_hover.png" />
+    <Resource Include="image\page_flexikey\mouse\btn_mouse_middle_key_launch_app.png" />
+    <Resource Include="image\page_flexikey\mouse\macro_mouse.png" />
+    <Resource Include="image\page_flexikey\profile\btn_profile_add_hover.png" />
+    <Resource Include="image\page_flexikey\profile\btn_profile_add_normal.png" />
+    <Resource Include="image\page_flexikey\profile\btn_profile_delete_hover.png" />
+    <Resource Include="image\page_flexikey\profile\btn_profile_delete_normal.png" />
+    <Resource Include="image\page_flexikey\profile\btn_profile_export_hover.png" />
+    <Resource Include="image\page_flexikey\profile\btn_profile_export_normal.png" />
+    <Resource Include="image\page_flexikey\profile\btn_profile_hover.png" />
+    <Resource Include="image\page_flexikey\profile\btn_profile_import_hover.png" />
+    <Resource Include="image\page_flexikey\profile\btn_profile_import_normal.png" />
+    <Resource Include="image\page_flexikey\profile\btn_profile_menu.png" />
+    <Resource Include="image\page_flexikey\profile\btn_profile_normal.png" />
+    <Resource Include="image\page_flexikey\profile\dropdown_profile.png" />
+    <Resource Include="image\page_flexikey\statistics\btn_rang_12_normal.png" />
+    <Resource Include="image\page_flexikey\statistics\btn_rang_16_normal.png" />
+    <Resource Include="image\page_flexikey\statistics\btn_rang_1_normal.png" />
+    <Resource Include="image\page_flexikey\statistics\btn_rang_1_selected.png" />
+    <Resource Include="image\page_flexikey\statistics\btn_rang_20_normal.png" />
+    <Resource Include="image\page_flexikey\statistics\btn_rang_4_normal.png" />
+    <Resource Include="image\page_flexikey\statistics\btn_rang_8_normal.png" />
+    <Resource Include="image\page_flexikey\statistics\btn_start_record_layer_1.png" />
+    <Resource Include="image\page_flexikey\statistics\btn_stop_record_layer_1.png" />
+    <Resource Include="image\page_flexikey\statistics\ic_qick_disable.png" />
+    <Resource Include="image\page_flexikey\statistics\qick_disable_layer_1_normal.png" />
+    <Resource Include="image\page_flexikey\statistics\qick_disable_layer_2_normal.png" />
+    <Resource Include="image\page_leddevice\bg_nb_top.png" />
+    <Resource Include="image\page_leddevice\color_picker\color_plate_layer2.png" />
+    <Resource Include="image\page_leddevice\color_picker\color_plate_layer4_normal_1.png" />
+    <Resource Include="image\page_leddevice\color_picker\ic_color_picker.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\bg_mask_nb_closeup.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\bg_mask_nb_open.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\front_light_bar_hover.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\front_light_bar_normal.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\front_projection_logo_hover.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\front_projection_logo_normal.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\kb_center_hover.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\kb_center_normal.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\kb_left_hover.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\kb_left_normal.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\kb_right_hover.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\kb_right_normal.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\notebook_closed.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\notebook_closed_front.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\notebook_open.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\side_led_closed_hover.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\side_led_closed_normal.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\side_led_open_hover.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\side_led_open_normal.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\top_led_logo_hover.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\top_led_logo_normal.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\tp_frame_hover.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\tp_frame_normal.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\tp_layer1_hover.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\tp_layer1_normal.png" />
+    <Resource Include="image\page_leddevice\kb_002520led_002520image\tp_layer2.png" />
+    <Resource Include="image\page_leddevice\kb_brightness\bg_brightness.png" />
+    <Resource Include="image\page_leddevice\kb_brightness\bg_brightness_0to3.png" />
+    <Resource Include="image\page_leddevice\kb_brightness\bg_brightness_0to3_perkey.png" />
+    <Resource Include="image\page_leddevice\kb_brightness\bg_brightness_3to4.png" />
+    <Resource Include="image\page_leddevice\kb_brightness\bg_brightness_full.png" />
+    <Resource Include="image\page_leddevice\kb_brightness\btn_kb_brightness_empty.png" />
+    <Resource Include="image\page_leddevice\kb_brightness\btn_kb_brightness_full.png" />
+    <Resource Include="image\page_leddevice\kb_brightness\ic_kb_brightness.png" />
+    <Resource Include="image\page_leddevice\kb_brightness\ic_kb_brightness_hover.png" />
+    <Resource Include="image\page_leddevice\kb_brightness\ic_kb_brightness_layer1_selected.png" />
+    <Resource Include="image\page_leddevice\kb_brightness\ic_kb_brightness_layer2_selected.png" />
+    <Resource Include="image\page_leddevice\kb_sleep_timer\btn_sleep_timer_layer1_selected.png" />
+    <Resource Include="image\page_leddevice\kb_sleep_timer\btn_sleep_timer_layer2_disable.png" />
+    <Resource Include="image\page_leddevice\kb_sleep_timer\btn_sleep_timer_layer2_enable.png" />
+    <Resource Include="image\page_leddevice\kb_sleep_timer\btn_sleep_timer_layer2_selected.png" />
+    <Resource Include="image\page_leddevice\kb_sleep_timer\ic_kb_sleep_timer.png" />
+    <Resource Include="image\page_leddevice\key\key_20.png" />
+    <Resource Include="image\page_leddevice\key\key_20_br.png" />
+    <Resource Include="image\page_leddevice\key\key_20_jp.png" />
+    <Resource Include="image\page_leddevice\key\key_20_uk.png" />
+    <Resource Include="image\page_leddevice\key\key_2b.png" />
+    <Resource Include="image\page_leddevice\key\key_2b_jp.png" />
+    <Resource Include="image\page_leddevice\key\key_2c_jp.png" />
+    <Resource Include="image\page_leddevice\key\key_2d.png" />
+    <Resource Include="image\page_leddevice\key\key_2d_jp.png" />
+    <Resource Include="image\page_leddevice\key\key_2e2f.png" />
+    <Resource Include="image\page_leddevice\key\key_4041.png" />
+    <Resource Include="image\page_leddevice\key\key_4c.png" />
+    <Resource Include="image\page_leddevice\key\key_4c_br.png" />
+    <Resource Include="image\page_leddevice\key\key_4c_jp.png" />
+    <Resource Include="image\page_leddevice\key\key_4d.png" />
+    <Resource Include="image\page_leddevice\key\key_4d_br.png" />
+    <Resource Include="image\page_leddevice\key\key_4e4f.png" />
+    <Resource Include="image\page_leddevice\key\key_6b.png" />
+    <Resource Include="image\page_leddevice\key\key_6b_br.png" />
+    <Resource Include="image\page_leddevice\key\key_6b_jp.png" />
+    <Resource Include="image\page_leddevice\key\key_6c.png" />
+    <Resource Include="image\page_leddevice\key\key_6c_br.png" />
+    <Resource Include="image\page_leddevice\key\key_6c_jp.png" />
+    <Resource Include="image\page_leddevice\key\key_6c_uk.png" />
+    <Resource Include="image\page_leddevice\key\key_6d.png" />
+    <Resource Include="image\page_leddevice\key\key_6d_br.png" />
+    <Resource Include="image\page_leddevice\key\key_6e6f.png" />
+    <Resource Include="image\page_leddevice\key\key_80.png" />
+    <Resource Include="image\page_leddevice\key\key_8082.png" />
+    <Resource Include="image\page_leddevice\key\key_82.png" />
+    <Resource Include="image\page_leddevice\key\key_8a.png" />
+    <Resource Include="image\page_leddevice\key\key_8b.png" />
+    <Resource Include="image\page_leddevice\key\key_8c.png" />
+    <Resource Include="image\page_leddevice\key\key_8d_jp.png" />
+    <Resource Include="image\page_leddevice\key\key_a3.png" />
+    <Resource Include="image\page_leddevice\key\key_ab.png" />
+    <Resource Include="image\page_leddevice\key\key_af.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\bar_led_effect.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\bar_led_effect_selected_layer1.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\bar_led_effect_selected_layer2.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_breath_layer1_hover.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_breath_layer2_hover.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_breath_normal.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_breath_selected.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_cycle_layer2_hover.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_cycle_normal.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_cycle_selected.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_cycle__layer1_hover.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_dance_layer1_hover.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_dance_layer2_hover.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_dance_normal.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_dance_selected.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_flash_layer1_hover.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_flash_layer2_hover.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_flash_normal.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_flash_selected.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_random_layer1_hover.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_random_layer2_hover.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_random_normal.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_random_selected.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_tempo_layer1_hover.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_tempo_layer2_hover.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_tempo_normal.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_tempo_selected.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_wave_layer1_hover.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_wave_layer2_hover.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_wave_normal.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_effect_wave_selected.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\btn_led_mode_selected.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\ic_led_effect_kb_breath_layer2.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\ic_led_effect_kb_cycle_layer2.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\ic_led_effect_kb_dancing_layer2.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\ic_led_effect_kb_flash_layer2.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\ic_led_effect_kb_layer1_double.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\ic_led_effect_kb_layer1_single.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\ic_led_effect_kb_random_layer2.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\ic_led_effect_kb_tampo_layer2.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\ic_led_effect_kb_wave_layer2.png" />
+    <Resource Include="image\page_leddevice\led_mode_effect\ic_led_mode.png" />
+    <Resource Include="image\page_leddevice\led_speed\bg_led_speed.png" />
+    <Resource Include="image\page_leddevice\led_speed\bg_led_speed_full.png" />
+    <Resource Include="image\page_leddevice\led_speed\btn_led_speed_empty.png" />
+    <Resource Include="image\page_leddevice\led_speed\ic_led_speed.png" />
+    <Resource Include="image\page_leddevice\led_speed\ic_led_speed_hover.png" />
+    <Resource Include="image\page_leddevice\led_speed\ic_led_speed_layer1_selected.png" />
+    <Resource Include="image\page_leddevice\led_speed\ic_led_speed_layer2_selected.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\bar_per_key_effect.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\bg_per_key_effect_line.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\box_per_key_effect_led_rgb_layer_1.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\box_per_key_effect_led_rgb_layer_2.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_layer2_disable.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_layer2_enable.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_random_blink_hover.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_random_blink_normal.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_random_blink_selected.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_ripple_hover.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_ripple_normal.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_ripple_selected.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_scan_hover.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_scan_normal.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_scan_selected.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_snake_hover.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_snake_normal.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_snake_selected.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_static_hover.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_static_normal.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_static_selected.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_wave_hover.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_wave_normal.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\btn_per_key_effect_wave_selected.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\ic_per_key_layer_1.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\ic_per_key_layer_2.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\slider_led_mode_layer2-_hover.png" />
+    <Resource Include="image\page_leddevice\per_key_effect\slider_led_mode_layer3_selected.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_blue_mouseover.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_blue_normal.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_blue_pressed.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_blue_selected.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_green_mouseover.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_green_normal.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_green_pressed.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_green_selected.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_pink_mouseover.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_pink_normal.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_pink_pressed.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_pink_selected.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_red_mouseover.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_red_normal.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_red_pressed.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_red_selected.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_sky_blue_mouseover.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_sky_blue_normal.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_sky_blue_pressed.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_sky_blue_selected.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_white_mouseover.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_white_normal.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_white_pressed.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_white_selected.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_yellow_mouseover.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_yellow_normal.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_yellow_pressed.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\btn_color_plate_yellow_selected.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\color_plate_layer1.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\color_plate_layer2.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\color_plate_layer4_disable.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\color_plate_layer4_normal.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\color_plate_normal_layer3_1.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\color_plate_normal_layer3_2.png" />
+    <Resource Include="image\page_leddevice\wave_color_picker\ic_color_picker.png" />
+    <Resource Include="image\page_systemmonitor\bg_system_border.png" />
+    <Resource Include="image\page_systemmonitor\bg_system_info_dgpu.png" />
+    <Resource Include="image\page_systemmonitor\bg_system_layer3_3.png" />
+    <Resource Include="image\page_systemmonitor\bg_system_setting.png" />
+    <Resource Include="image\page_systemmonitor\bg_system_setting_tab.png" />
+    <Resource Include="image\page_systemmonitor\bg_system_setting_tab_shadow.png" />
+    <Resource Include="image\page_systemmonitor\btn_default_hover.png" />
+    <Resource Include="image\page_systemmonitor\btn_default_normal.png" />
+    <Resource Include="image\page_systemmonitor\btn_default_pressed.png" />
+    <Resource Include="image\page_systemmonitor\btn_gpu1_hover.png" />
+    <Resource Include="image\page_systemmonitor\btn_gpu1_normal.png" />
+    <Resource Include="image\page_systemmonitor\btn_gpu1_selected.png" />
+    <Resource Include="image\page_systemmonitor\btn_gpu2_hover.png" />
+    <Resource Include="image\page_systemmonitor\btn_gpu2_normal.png" />
+    <Resource Include="image\page_systemmonitor\btn_gpu2_selected.png" />
+    <Resource Include="image\page_systemmonitor\btn_previous_hover.png" />
+    <Resource Include="image\page_systemmonitor\btn_previous_normal.png" />
+    <Resource Include="image\page_systemmonitor\btn_previous_pressed.png" />
+    <Resource Include="image\page_systemmonitor\btn_save_hover.png" />
+    <Resource Include="image\page_systemmonitor\btn_save_normal.png" />
+    <Resource Include="image\page_systemmonitor\btn_save_pressed.png" />
+    <Resource Include="image\page_systemmonitor\clock\clock_dotted_line_2.png" />
+    <Resource Include="image\page_systemmonitor\clock\clock_dotted_line_color_1.png" />
+    <Resource Include="image\page_systemmonitor\clock\gpu_clock_layer1.png" />
+    <Resource Include="image\page_systemmonitor\clock\gpu_clock_layer2.png" />
+    <Resource Include="image\page_systemmonitor\clock\gpu_clock_layer3.png" />
+    <Resource Include="image\page_systemmonitor\clock\gpu_clock_layer4.png" />
+    <Resource Include="image\page_systemmonitor\clock\gpu_utilization_layer2_1.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\bg_system_cpu_setting.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\bg_system_gpu_setting.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\box_cpu_ratio_override.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cache_ratio_override_hover.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cache_ratio_override_nomal.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cache_ratio_override_pressed.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cache_ratio_override_selected.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cpu_ratio_override.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cpu_ratio_override_hover.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cpu_ratio_override_nomal.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cpu_ratio_override_pressed.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cpu_ratio_override_selected.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cpu_voltage_hover.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cpu_voltage_nomal.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cpu_voltage_pressed.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cpu_voltage_selected.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cpu_vr_limit_hover.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cpu_vr_limit_nomal.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cpu_vr_limit_pressed.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_cpu_vr_limit_selected.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_gpu1_selected.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_gpu2_selected.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_gpu_setting_dropdown.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_gpu_setting_dropdown_1.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_power_limit_hover.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_power_limit_nomal.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_power_limit_pressed.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\btn_power_limit_selected.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\icon_core_increment.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\icon_memory_increment.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\ic_cpu_setting.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\ic_gpu_setting.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\slider_cpu_setting_disable.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\slider_cpu_setting_enable.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\slider_gpu_setting_1.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\slider_handle_layer1.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\slider_handle_layer2.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\slider_range.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\slider_range_1.png" />
+    <Resource Include="image\page_systemmonitor\cpugpusetting\slider_range_2.png" />
+    <Resource Include="image\page_systemmonitor\fansetting\btn_fan_cpu_hover.png" />
+    <Resource Include="image\page_systemmonitor\fansetting\btn_fan_cpu_normal.png" />
+    <Resource Include="image\page_systemmonitor\fansetting\btn_fan_cpu_pressed.png" />
+    <Resource Include="image\page_systemmonitor\fansetting\btn_fan_cpu_selected.png" />
+    <Resource Include="image\page_systemmonitor\fansetting\btn_fan_gpu1_hover.png" />
+    <Resource Include="image\page_systemmonitor\fansetting\btn_fan_gpu1_normal.png" />
+    <Resource Include="image\page_systemmonitor\fansetting\btn_fan_gpu1_pressed.png" />
+    <Resource Include="image\page_systemmonitor\fansetting\btn_fan_gpu2_hover.png" />
+    <Resource Include="image\page_systemmonitor\fansetting\btn_fan_gpu2_normal.png" />
+    <Resource Include="image\page_systemmonitor\fansetting\btn_fan_gpu2_pressed.png" />
+    <Resource Include="image\page_systemmonitor\fansetting\btn_gpu1_selected.png" />
+    <Resource Include="image\page_systemmonitor\fansetting\btn_gpu2_selected.png" />
+    <Resource Include="image\page_systemmonitor\fan\bg_system_fan_setting_auto.png" />
+    <Resource Include="image\page_systemmonitor\fan\bg_system_fan_setting_custom.png" />
+    <Resource Include="image\page_systemmonitor\fan\btn_disable.png" />
+    <Resource Include="image\page_systemmonitor\fan\btn_enable.png" />
+    <Resource Include="image\page_systemmonitor\fan\ic_fan_setting.png" />
+    <Resource Include="image\page_systemmonitor\fan\ic_fan_setting_adjust.png" />
+    <Resource Include="image\page_systemmonitor\fan\ic_fan_setting_fixed.png" />
+    <Resource Include="image\page_systemmonitor\fan\system_fan_layer1_1.png" />
+    <Resource Include="image\page_systemmonitor\fan\system_fan_layer2_1.png" />
+    <Resource Include="image\page_systemmonitor\fan\system_fan_layer3_1.png" />
+    <Resource Include="image\page_systemmonitor\ic_system_cpu_voltage.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_custom_hover.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_custom_nomal.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_custom_pressed.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_custom_selected.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_default_hover.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_default_nomal.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_default_pressed.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_default_selected.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_xmp1_hover.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_xmp1_nomal.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_xmp1_pressed.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_xmp1_selected.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_xmp2_hover.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_xmp2_nomal.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_xmp2_pressed.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_memory_xmp2_selected.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_mem_setting_dropdown_off.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\btn_mem_setting_dropdown_on.png" />
+    <Resource Include="image\page_systemmonitor\memsetting\ic_memory_setting.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\clock_mem_layer2_2999.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\clock_mem_layer2_4006.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\clock_mem_layer2_405.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\clock_mem_layer2_810.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\clock_mem_layer2_full.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\clock_mem_layer4_2999.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\clock_mem_layer4_4006.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\clock_mem_layer4_405.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\clock_mem_layer4_810.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\clock_mem_layer4_full.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\cpu_mem_clock_layer1.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\cpu_mem_clock_layer2.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\cpu_mem_clock_layer3.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\cpu_mem_clock_layer4.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\cpu_mem_clock_layer5.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\gpu_mem_clock_layer1.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\gpu_mem_clock_layer2.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\gpu_mem_clock_layer3.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\gpu_mem_clock_layer4.png" />
+    <Resource Include="image\page_systemmonitor\mem_clock\gpu_mem_clock_layer5.png" />
+    <Resource Include="image\page_systemmonitor\temp\system_cpu_temperature_layer3_1.png" />
+    <Resource Include="image\page_systemmonitor\temp\system_gpu_temperature_layer3_1.png" />
+    <Resource Include="image\page_systemmonitor\temp\system_temperature_layer1_1.png" />
+    <Resource Include="image\page_systemmonitor\temp\system_temperature_layer2_2.png" />
+    <Resource Include="image\page_systemmonitor\temp\system_temperature_needle_layer1_2.png" />
+    <Resource Include="image\page_systemmonitor\temp\system_temperature_needle_layer2_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\ic_lcd_brightness.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\bg_title_bar_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\..\..\..\..\Windows\Microsoft.NET\Framework64\v4.0.30319\WPF\PresentationFramework.Aero2.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\btn_volume_play_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\btn_volume_play_normal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\slider_volume_laye2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\slider_volume_handle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\slider_volume_handle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\TB2wNemk_JYBeNjy1zeXXahzVXa_!!1104733572.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\buy-me-coffee-paypal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="nvidia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="stock-vector-usb-charging-icon-in-circle-on-white-background-428306944.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="6-64533_gear-icon-png-white.png.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="white-gear-png-gear-icon-png-white-gear-icon-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\3242157 %282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="dark-minimalist-wallpaper-new-minimalism-triangle-black-abstract-wallpapers-hd-of-dark-minimalist-wallpaper.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
